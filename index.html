@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Shaymin</title>
+
+    <!-- the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pomodoro.css" />
+    <link rel="stylesheet" href="todo.css" />
+    <link rel="stylesheet" href="account-bar.css" />
+
+    <!-- the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- start of content -->
+    <header>
+      <img
+        class="banner"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/af2160ba-fd0f-4b68-8ad5-3c23d052cfc8/d72tpu2-52396e4e-9d27-42f3-bfee-db5b94936291.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmMjE2MGJhLWZkMGYtNGI2OC04YWQ1LTNjMjNkMDUyY2ZjOFwvZDcydHB1Mi01MjM5NmU0ZS05ZDI3LTQyZjMtYmZlZS1kYjViOTQ5MzYyOTEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ivKHklANKORZHnbZHoce7XgrNrVZIyKbUrFzKxIkAgM"
+      />
+      <br>
+      <h1>Shaymin</h1>
+      <span>
+        <i>Your productivity tool, gamified</i>
+      </span>
+      <div id="account-bar-wrapper">
+        <a href="#" onclick="changeavatar()">
+          <img id="avatar" src="https://static.wikia.nocookie.net/wii/images/8/89/Pikachu.jpg/revision/latest?cb=20140209205851"
+            style="float: right"
+            width="100px"
+          />
+        </a>
+        <div id="account-bar">
+          <div
+            id="account-bar-name"
+            align="right"
+            contenteditable="true"
+            style="display: block"
+          >
+            <b>Character</b>
+          </div>
+          <div id="account-bar-level" align="right">Level 0</div>
+
+          <div id="account-bar-next-level" align="right"></div>
+          <div id="newavatar" align="right"></div>
+        </div>
+      </div>
+    </header>
+    <p>
+      Welcome to <b>Shaymin</b>! Our website uses a points system. For every
+      task you finish, you gain 10 xp. For every 25 minutes finished with the
+      Pomodoro Timer, you gain 25 xp. Enjoy your stay and be motivated!
+    </p>
+
+    <main>
+      <div id="pomodoro-app">
+        <h2>Pomodoro Timer</h2>
+        <span>Divide your work into 25 minute chunks.</span>
+        <br />
+        <div id="container">
+          <div id="timer">
+            <div id="time">
+              <span id="minutes">25</span>
+              <span id="colon">:</span>
+              <span id="seconds">00</span>
+            </div>
+            <div id="filler"></div>
+          </div>
+
+          <div id="buttons">
+            <button id="work">Work</button>
+            <button id="shortBreak">Short Break</button>
+            <button id="longBreak">Long Break</button>
+            <button id="stop">Stop</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="todo">
+        <h2>To-do List</h2>
+        <span> Keep track of your tasks here and level up! </span> <br />
+        <input type="text" id="todoinput" />
+        <button id="todobtn">+</button>
+        <div id="items"></div>
+      </div>
+
+      <h2 style="clear: both">Music Playlist</h2>
+      <span>
+        Enjoy our curated songs for focused work, or treat yourself to a break.
+      </span>
+      <div>
+        <div class="song">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/1h0CEZCm6IbFTbxThn6Xcs?utm_source=generator"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <hr />
+      <span> © Shaymin 2022 | All Rights Reserved </span>
+    </footer>
+  </body>
+</html>
